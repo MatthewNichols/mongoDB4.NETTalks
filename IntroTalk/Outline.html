@@ -1,0 +1,104 @@
+﻿<h1>Intro to MongoDB for .NET</h1>
+
+<ul>
+<li>What is MongoDB?
+<ul>
+<li>A document database, what's that?...explain basic structures; collections, documents, indexes</li>
+</ul></li>
+<li>Benefits and Features:
+<ul>
+<li>Highly scalable and available. Built to scale horizontally and to replicate</li>
+<li>Schemaless and Multi-dimensional
+<ul>
+<li>Ok there is almost certainly a schema, but it is managed by a the application, not in fixed structures in the database</li>
+<li>Open source and well supported</li>
+<li>Everything is JSON(ish, explain BSON a little bit) but fully indexable</li>
+<li>which brings us to...</li>
+</ul></li>
+<li>Incredibly Productive for development 
+<ul>
+<li>Supports subclassing easily</li>
+<li>No "Object-relational impedance mismatch"; data feels like objects</li>
+<li>Data access is stupidly easy. No ORM needed</li>
+<li>Because the schema is managed by the application a bunch of typical DB problems become very easy to handle...DB version control, schema maintenance in local dbs, deploys, maintaining test data</li>
+<li>LINQ support...though not in the current version of the driver, probably returning in 2.1.</li>
+</ul></li>
+<li>Full text indexes</li>
+<li>Easy to set up highly available ReplicaSets</li>
+</ul></li>
+<li>Downsides?
+<ul>
+<li>A little (re)learning curve for people who have been doing relational for a long time. Frankly for new developers I would say it is much easier than relational.</li>
+<li>Feature vs Scalability chart?</li>
+<li>No Joins, No Transactions, No constriants? What????
+<ul>
+<li>Remember MongoDB assumes multi-instance scaling will be used and these are very expensive operations across instances</li>
+<li>Doesn't matter as much as you might think </li>
+<li>Joins and constraints can be done, but they are done in the application layer and require a round trip.  Caching can be useful here</li>
+</ul></li>
+<li>Not great tooling out of the box.  But a growing number of third party tools.</li>
+<li>Querying outside of application code takes getting used to (just like SQL did, remember?)</li>
+</ul></li>
+<li>Examples/Demo
+<ul>
+<li>Installing
+<ul>
+<li>Config file</li>
+<li>Setting up as a service</li>
+</ul></li>
+<li>The obligatory Hello World
+<ul>
+<li>Connecting to MongoDB</li>
+</ul></li>
+<li>Something a little more useful
+<ul>
+<li>Inserting</li>
+<li>Reading/Searching</li>
+<li>Deleting</li>
+</ul></li>
+<li>An example of a typical schema
+<ul>
+<li>Here is why the lack of transactions is rarely that big a deal</li>
+<li>If you still need transactions take a MongoDB/SQL hybrid approach.  This can also be useful for reporting.</li>
+</ul></li>
+<li>Indexing</li>
+<li>Mapping
+<ul>
+<li>Conventions</li>
+</ul></li>
+<li>Quick examples in one or two other frameworks
+<ul>
+<li>NodeJs (MEAN stack maybe?)</li>
+<li>??</li>
+</ul></li>
+</ul></li>
+<li>Resources
+<ul>
+<li>Tools
+<ul>
+<li>RoboMongo http://www.robomongo.org/ A "shell-centric cross platform MongoDB Management tool" </li>
+<li>MongoDB's native tools; query shell, import, backup and more</li>
+<li>SlamData http://slamdata.com Open source tool for querying MongoDB.</li>
+<li>Other third-party tools</li>
+<li>Rumors of MongoDB building a Visual Studio query tool</li>
+</ul></li>
+<li>Similar systems
+<ul>
+<li>CouchBase</li>
+<li>RavenDB</li>
+<li>Microsoft DocumentDB</li>
+<li>PostgreSQL now has JSON datatypes with indexing. </li>
+</ul></li>
+<li>Learn More
+<ul>
+<li>Stackoverflow (obviously)</li>
+<li>Pluralsight has a large number of courses.</li>
+<li>MongoDB University (https://university.mongodb.com/)
+<ul>
+<li>MongoDB for .NET Developers</li>
+<li>MongoDB for Node.js Developers</li>
+<li>and many more</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
