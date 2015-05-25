@@ -35,7 +35,7 @@ namespace HelloMongo
             //Get a reference to the collection
             var hellos = mongoDatabase.GetCollection<HelloRecord>("hellos");
 
-            //SHow all of the others that have already been here
+            //Show all of the others that have already been here
             Console.WriteLine("I have also meet these people:");
             using (var cursor = await hellos.FindAsync(new BsonDocument()))
             {
