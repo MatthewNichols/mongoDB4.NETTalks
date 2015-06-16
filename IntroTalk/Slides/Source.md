@@ -13,7 +13,7 @@ https://github.com/MatthewNichols/mongoDB4.NETTalks
 # What is MongoDB?
 MongoDB is a Document Database.
 
-Cool Picture here 
+.documentdatabase[ ![Document Database](images/DocumentDatabase.svg) ]
 
 ???
 MongoDB is a cross platform, open source, document database.  Obligatory NoSQL mention here. It stores data in collections of JSON-ish documents that can be fully indexed for very fast search.
@@ -77,12 +77,21 @@ http://www.mongodb.com/presentations/replication-and-replica-sets-3
 
 ---
 
-# Examples/Demos
+# Demos
+* Installing
+    * Standard installers and install directions for all platforms at http://docs.mongodb.org/manual/
+    * Config tips in the Github repos for this talk
+--
+
+
+## Code already!!
+
+???
 * Installing
     * Standard installers and install directions for all platforms at http://docs.mongodb.org/manual/
     * Config tips in the Github repos for this talk
 * The obligatory Hello World
-    * Connecting to MongoDB
+    
 * Something a little more useful
     * Inserting
     * Reading/Searching
@@ -96,29 +105,23 @@ http://www.mongodb.com/presentations/replication-and-replica-sets-3
 * Quick examples in one or two other frameworks
     * NodeJs (MEAN stack maybe?)
     * ??
-
-???
-
 ---
 # Tools
-* RoboMongo http://www.robomongo.org/ A "shell-centric cross platform MongoDB Management tool". Open source, getting regular updates.  
+RoboMongo http://www.robomongo.org/ A "shell-centric cross platform MongoDB Management tool". Open source, getting regular updates. (My current favorite)  
 .tool-image1[ ![MongoDB](images/robomongo.png)]
 
 ---
 # Tools
-* NoSQL Manager http://www.mongodbmanager.com/  Looks good but I haven't tried yet. Proprietary, but reasonably priced.   
+NoSQL Manager http://www.mongodbmanager.com/  Looks good but I haven't tried yet. Proprietary, but reasonably priced.   
 .tool-image2[ ![MongoDB](images/nosql-manager.jpg)]
 ---
 # Tools
-* MongoDB's native tools; query shell, import, backup and more.  Very useful but like most power tools have a learning curve.
-
+MongoDB's native tools; query shell, import, backup and more.  Very useful but like most power tools have a learning curve.
+.tool-image2[ ![MongoDB](images/cmdMongo.png)]
 ---
 # Tools
-* SlamData http://slamdata.com Open source tool for querying MongoDB.
+SlamData http://slamdata.com Open source tool for querying MongoDB.
 ![MongoDB](images/graphic-slamdata-editor-small.png)
----
-# Tools
-* Other third-party tools
 ---
 
 # Similar systems

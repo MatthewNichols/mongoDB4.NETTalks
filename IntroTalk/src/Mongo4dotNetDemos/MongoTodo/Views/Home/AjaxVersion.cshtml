@@ -1,0 +1,78 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<div id="todoApp">
+
+    <h2>Lists</h2>
+
+    <input type="text" placeholder="Search" />
+
+    <ul data-bind="foreach: lists">
+        <li>
+            <span data-bind="text: name"></span>
+            <a href="#" data-bind="click: $root.listDisplayClickHandler">Display</a>
+            <a href="#" data-bind="click: $root.listEditClickHandler">Edit</a>
+        </li>
+    </ul>
+
+    <div data-bind="with: selectedList, visible: listDisplayVisible">
+        <h3 data-bind="text: name"></h3>
+
+        <div data-bind="foreach: items">
+            <label>
+                Title:
+                <span data-bind="text: title"></span>
+            </label><br />
+            <label>
+                Details:
+                <span data-bind="text: details"></span>
+            </label>
+        </div>
+
+    </div>
+
+    <div data-bind="with: selectedList, visible: listEditVisible">
+        <h3 data-bind="text: name"></h3>
+
+        <div data-bind="with: addEditItem, visible: addEditItemVisible">
+            <h3 data-bind="text: $parent.addEditItemTitle"></h3>
+            <label>
+                Title:
+                <input type="text" data-bind="value: title" />
+            </label><br />
+            <label>
+                Details:
+                <input type="text" data-bind="value: details" />
+            </label>
+            <br />
+            <a href="#" data-bind="click: $parent.saveItemClickHandler">Save</a>
+        </div>
+
+
+        <ul data-bind="foreach: items">
+            <li>
+                <span data-bind="text: title"></span>
+            </li>
+        </ul>
+
+        <a href="#" data-bind="click: addItemClickHandler">Add Item</a><br/>
+
+        <a href="#" data-bind="click: $root.saveListClickHandler">Save List</a>
+
+    </div>
+
+
+</div>
+
+
+
+@section pageScripts
+{
+    <script src="~/Scripts/app/pre-init.js"></script>
+    <script src="~/Scripts/app/services/dataService.js"></script>
+    <script src="~/Scripts/app/models/appVM.js"></script>
+    <script src="~/Scripts/app/models/listIdVM.js"></script>
+    <script src="~/Scripts/app/models/listVM.js"></script>
+    <script src="~/Scripts/app/init.js"></script>
+}
